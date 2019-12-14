@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="珠宝商城" />
+		<meta name="description" content="珠宝商城" />
+		<title>珠宝商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.tui{display: flex;justify-content: flex-end;padding: 10px;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">订单详情</span>
+		</div>
+		<div class="order">
+			<div class="list on">
+				<ul>
+					<li>
+						<div class="team">
+							<div class="cap">
+								<span>订单号</span>
+								<span>4545454516316468464616</span>
+							</div>
+							<div class="cap">
+								<span>商品名称</span>
+								<span>钻戒</span>
+							</div>
+							<div class="cap">
+								<span>商品价格</span>
+								<span>50000</span>
+							</div>
+							<div class="cap">
+								<span>已付定金</span>
+								<span>0</span>
+							</div>
+							<div class="cap">
+								<span>已付定单</span>
+								<span>0</span>
+							</div>
+							<div class="cap">
+								<span>定金/定单</span>
+								<span>无</span>
+							</div>
+							<div class="cap">
+								<span>商品类型</span>
+								<span>购物券订单</span>
+							</div>
+							<div class="cap">
+								<span>购买备注</span>
+								<span>电饭锅水电费你晒了吗号开始 </span>
+							</div>
+							<div class="cap">
+								<span>时间</span>
+								<span>2020-11-11 09:09:00</span>
+							</div>
+							<div class="cap">
+								<!--<p class="take">确认收款</p>-->
+								<!--<p class="see_upload">查看凭证</p>-->
+								<p class="see">查看信息</p>
+								<p class="upload">上传凭证</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		
+		<!--查看信息-->
+		<div class="mui-popover mui-popover-action mui-popover-bottom" id="see_box">
+			<div class="see_box" >
+				<div class="cap">
+					<span>开户行</span>
+					<span>中国建设银行</span>
+				</div>
+				<div class="cap">
+					<span>银行卡号</span>
+					<span>4441641654687477687464163415</span>
+				</div>
+				<div class="cap">
+					<span>用户名</span>
+					<span>健身卡</span>
+				</div>
+				<div class="cap">
+					<span>手机号</span>
+					<span>17352654532</span>
+				</div>
+			</div>
+		</div>
+		<!--上传凭证-->
+		<div class="mui-popover mui-popover-action mui-popover-bottom" id="tuikuan_box">
+			<div class="tuikuan_box " >
+				<div class="div" style="display:block;">
+					<label><s>*</s> 上传凭证</label>
+					<div class="uplaod_box">
+						<div class="upload">
+							<div class="photo">
+								<div class="photo_l">
+									<img src="images/add1.png" class="ico"/> 
+									<p class="p">点击上传上传凭证</p>
+								</div>
+								<input type="file" class="file" id="file" onchange="preview(this)" placeholder="请上传上传凭证"/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<input type="button" name="" id="" class="submit" value="提交" />
+			</div>
+		</div>
+		<!--查看凭证-->
+		<div class="mui-popover mui-popover-action mui-popover-bottom" id="voucher_box">
+			<div class="voucher_box" >
+				<img src="images/s.png"/>
+			</div>
+		</div>
+		
+	</body>
+	<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>	
+	<script type="text/javascript">
+		$(".see").click(function(){
+			mui('#see_box').popover('show');
+		})
+		$(".upload").click(function(){
+			mui('#tuikuan_box').popover('show');
+		})
+		$(".see_upload").click(function(){
+			mui('#voucher_box').popover('show');
+		})
+		
+		//图片预览
+		function preview(file) {
+			 var img;
+			 var parent = $(file).prev();
+			 if(file.files && file.files[0]) {
+			 	var reader = new FileReader();
+			 	reader.onload = function(evt) {
+			 		var src = evt.target.result;
+			 		img = '<img src="' + evt.target.result + '" class="img"/>';
+			 		//	console.log(img)
+			 		parent.html(img);
+			 	}
+			 	reader.readAsDataURL(file.files[0]);
+			 } else {
+			 	var src = file.value;
+			 	img = '<img src="' + src + '" class="img"/>';
+			 	parent.html(img);
+			}
+		}
+	</script>
+</html>

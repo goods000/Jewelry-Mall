@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="珠宝商城" />
+		<meta name="description" content="珠宝商城" />
+		<title>珠宝商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+		</style>
+	</head>
+	<body>
+		
+		<div class="header">
+			<a class="back" href="user.html"><img src="images/back.png"/></a>
+			<span class="txt">设置</span>
+		</div>
+		
+		<div class="setup">
+			<div class="ul">
+				<ul>
+					
+					<a href="edit_pwd.html">
+					<li>
+						<span class="txt">修改登录密码</span>
+						<img src="images/more.png" class="more" />
+					</li>
+					</a>
+					
+					<a href="edit_pay_pwd.html">
+					<li>
+						<span class="txt">设置/修改支付密码</span>
+						<img src="images/more.png" class="more" />
+					</li>
+					</a>
+					<a href="feedback.html">
+					<li>
+						<span class="txt">意见反馈</span>
+						<img src="images/more.png" class="more" />
+					</li>
+					</a>
+					
+				</ul>
+				
+				<a href="" class="exit">退出登录</a>
+			</div>
+		</div>
+		
+		
+		<script>
+				//图片预览
+			 function preview(file) {
+		        var prevDiv = document.getElementById('preview');
+		        if (file.files && file.files[0]) {
+		            var reader = new FileReader();
+		            reader.onload = function (evt) {
+//		            	console.log('src11:'+evt.target.result)
+		            	var src=evt.target.result;
+						$(".img").attr('src',src)
+//		                prevDiv.innerHTML = '<img src="' + evt.target.result + '" />';
+		            }
+		            reader.readAsDataURL(file.files[0]);
+		        } else {
+//		            prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+					var src=file.value;
+//					console.log('src22:'+src)
+					$(".img").attr('src',src)
+		        }
+    		}
+		</script>
+	</body>
+</html>

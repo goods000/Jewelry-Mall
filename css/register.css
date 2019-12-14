@@ -1,0 +1,96 @@
+
+
+body{background: url(../images/login_bg.png) no-repeat;background-size: 100% 100%;min-height: 100vh;}
+/*登录注册主页*/
+.login_index{overflow: hidden;}
+.login_index .logo{text-align: center;    margin-top: 2rem;}
+.login_index .logo img{max-width: 200px;}
+.login_index .logo .p{ margin-top: 2rem;font-size: 1.2rem;color: #fff; }
+.login_index  .div{margin-top: 13rem;}
+.login_index .button{display: block;width: 80%;margin:auto;border-radius: 10px;text-align: center;height: 44px;line-height: 44px;color: #fff; 
+   background: none;border: 0; margin-top: 20px;font-size: 1.2rem;}
+.login_index .button.submit{background:#fff;background-size: 100% 100%;color: #3487EE; margin-top: 60px;}
+.login_index .button.button_reg{border:1px solid #ddd;}
+
+
+.login{overflow: hidden;margin: auto;width: 100%;}
+.login .top{text-align: center;overflow: hidden;}
+.login .logo img{width: 5.5rem;height: auto;}
+.login .top .txt{font-size: 1.5rem;color:#fff ;}
+.login .tab{width:48%;  margin: auto;display:flex;margin-top: 2rem;   
+ overflow: hidden;align-items: center;padding:4px;background: #CD4326;border-radius: 19px;}
+.login .tab a{color:#FFD4CC;font-size:1.1rem;width: 50%;text-align: center;height: 2.2rem;line-height: 2.2rem;}
+.login .tab .active{color:#1F1F1F;position: relative;background: #fff;border-radius: 19px;}
+/* .login .tab .active::after{content: " ";position: absolute;width: 80%;height:6px;bottom: 0;left: 10%;
+background: url(../images/border_l.png) no-repeat;background-size: 100% 100%; } */
+.login .title{font-size:1.6rem;color:#3291f7;text-align:center;}
+.login .form{width:90%;  margin: auto;margin-top: 1rem;z-index:666;background: #fff;border-radius: 5px;padding: 10px 0;}
+.login .form .group{overflow: hidden;position: relative;margin-top: 1rem;    width: 87%;
+    margin: auto; height:4.25rem;border-bottom: 1px solid #EBEBEB;display: flex;justify-content: flex-end;align-items: center;}
+.login  .group label{display: inline-block;width: 2rem;}
+.login  .group label img{height: 1.5rem;}
+.login  .group .ico {height: 1.3rem;}
+.login  .group input,.login  .group select{width: 100%;background: none;color:#1D1E1F ;padding: 1rem;font-size: 1rem;}
+.login .button{display: block;width: 87%; margin: auto; border-radius: 22px;text-align: center;height: 3.15rem;line-height: 3.15rem;color: #fff;    background: none;
+    border: 0; margin-top: 20px;font-size: 1.2rem;}
+.login .button.submit{background: linear-gradient(to left,#FA825B,#FFAD0C);color: #fff ;}
+.login .button.button_reg{color: #fff;border: 1px solid #fff;}
+/* .login .group button[disabled],button:disabled{background:rgba(87, 113, 230, 0.5) !important;} */
+.login .group .close{display: none;}
+
+.login .error{margin:5% 8% 0;color:#3487EE ;position: relative;
+    overflow: hidden;display: flex;justify-content: space-between;}
+.login .error a{color: #333333;text-decoration: none;}
+ .login .error .fl{color: #333333;font-size: 1rem;position: relative;}
+.login .error .fl .border{border: 1px solid #A8ABB2;display: inline-block;width: 15px;height: 15px;margin-right: 5px;
+vertical-align: middle;z-index: 666;}
+.login .error .fl .border.mark{background: url(../images/mark.png) no-repeat;background-size:100% 100% ;}
+.login .error .fl input{width: 15px;height: 15px;    position: absolute;top: 3px;left: 0;opacity: 0;}
+.login  .group .getCode{position: absolute;top:1.7rem;right: 0;width: 100px;text-align: center;padding: 0.5rem 0;
+color: #FFAD0C;border-radius: 11px;font-size: 1rem;}
+.login  .group .getCode1{color:#FF2738 ;    width: 100px;}
+.login  .group input::placeholder{color: #fff;}
+.login  .group input::-moz-placeholder{color: #fff;}
+.login  .group input::-ms-input-placeholder{color: #fff;}
+.login  .group input:-wek-placeholder{color: #fff;}
+.login .logo{text-align: center;margin: 5rem 0 3rem;}
+.login p a{color: #fff;font-size: 1rem;}
+.login .p{text-align: center;font-size: 1rem;margin: 10% auto;}
+.login .p a{font-size: 1.2rem;}
+
+.login  .group input::placeholder{color: #999;}
+.login  .group input::-moz-placeholder{color: #999;}
+.login  .group input::-ms-input-placeholder{color: #999;}
+.login  .group input:-wek-placeholder{color: #999;}
+.register .down{display:block;width:40%;margin:0;position:absolute;bottom:4%;left:30%;}
+.register .down img{width:100%;}
+
+/* 中英切换 */
+.change_log{ position: absolute; top: 25px;  right: 0; z-index: 999;}
+.change_log li{  line-height: 32px;    width: 80px;line-height: 32px;background: rgba(0,0,0,.5);  text-align: center;}
+.change_log .li_hover a{color: white;display:block;}
+.change_log ul{color: white;font-size: 14px;position: relative;}
+.change_log  .menu_nav{width:78px; position: absolute;top:32px;left:0;display:none;  }
+.change_log  .menu_nav li{ background: rgba(0, 0, 0, 0.19);  text-align: center;}
+.change_log .ico{width: 9px;vertical-align: middle;}
+.change_log .li_hover>a{display: inline-block;}
+
+/* --------------记住助记词----------- */
+.zu_remem{padding: 15px;overflow: hidden;}
+.zu_remem .title{color: #1D1E1F;font-size: 1.5rem;margin-top: 2rem;}
+.zu_remem .p{color: #A8ABB2;font-size: 0.9rem;margin-top: 2rem;}
+.zu_remem .letter{color: #A8ABB2;font-size: 0.9rem;margin-top: 2rem;background: #F2F3F5;
+padding: 1.5rem 3rem 1.6rem 0.8rem;}
+.zu_remem .submit{display: block;width: 80%;border-radius: 10px;text-align: center;height: 48px;line-height: 48px;color: #fff;    
+background: #3487EE; border: 0; margin-top: 20px;font-size: 1.2rem;position: absolute;bottom:7.25rem ;left: 10%;}
+.zu_remem .words{overflow: hidden;margin-top: 2rem;}
+.zu_remem .words span{color: #A8ABB2;font-size: 0.9rem;padding: 2px 7px;border-radius: 5px;border: 1px solid #D9DADB;
+margin-left: 1rem;margin-top: 1rem;display: inline-block;}
+.zu_remem .letters{min-height: 7.875rem;padding: 15px;}
+.zu_remem .letter .check{color: #3487EE;font-size: 0.9rem;padding: 2px 7px;border-radius: 5px;border: 1px solid #3487EE;
+margin-left: 1rem;margin-top: 1rem;display: inline-block;background: #fff;}
+
+.form .nav{width: 100%;display: flex;align-items: center;justify-content: space-around;background: #CD4326;margin-top: -10px;border-radius:15px 15px 0 0;}
+.form .nav .a{color: #FFD4CC;font-size: 1.1rem;width: 50%;text-align: center;height: 3rem;line-height: 3rem;margin-top: 0px;}
+.form .nav .active{color: #1F1F1F;background: #fff;border-radius:15px 0 0 0;}
+.form .nav p:nth-child(2).active{color: #1F1F1F;background: #fff;border-radius:0 15px 0 0;}

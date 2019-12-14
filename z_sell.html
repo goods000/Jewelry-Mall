@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="珠宝商城" />
+		<meta name="description" content="珠宝商城" />
+		<title>珠宝商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="back" href="user.html"><img src="images/back.png" /></a>
+			<span class="txt">转账及售出</span>
+		</div>
+
+		<div class="order sell">
+			
+			<div class="tab">
+				<a href="javascritp:;" class="active">转账中心</a>
+				<a href="javascritp:;">商品出售</a>
+			</div>
+			
+			<div class="top">
+				<div class="info">
+					<div class="l">
+						<img src="images/logo.png" class="touxiang">
+						<div class="t">
+							<p><span class="name">行走的风</span><span class="grade">经销商</span></p>
+							<p class="qu">购物券：800</p>
+						</div>
+					</div>
+					<div class="data">
+						<span><i>奖励商品价值</i>：<i>800</i></span>
+						<span><i>库存商品价值</i>：<i>800</i></span>
+					</div>
+					<div class="data">
+						<span><i>可售商品价值</i>：<i>800</i></span>
+						<span class="date"><i>激活日期</i>：<i>2019-11-11 10:08:45</i></span>
+					</div>
+				</div>
+			</div>
+			
+
+			<!--考核标准-->
+			<div class="list on">
+				<ul>
+					<li>
+						<div class="team">
+							<div class="cap">
+								<span>我的商品账号</span>
+								<span>17352654532</span>
+							</div>
+							<div class="cap">
+								<span>转账类型</span>
+								<span>购物券</span>
+							</div>
+							<div class="cap">
+								<span>我的商户账号</span>
+								<span>17352654532</span>
+							</div>
+							<div class="cap">
+								<span>转账数额</span>
+								<input type="number" placeholder="请输入转账数量" name="" id="" value="" />
+							</div>
+							<div class="cap">
+								<span>接受商号账号</span>
+								<input type="number" placeholder="请输入接受商号账号" name="" id="" value="" />
+							</div>
+							<div class="cap">
+								<span>接收商号姓名</span>
+								<input type="text" placeholder="请输入接受商号账号" name="" id="" value="" />
+							</div>
+							<div class="cap">
+								<span>二级密码</span>
+								<input type="text" placeholder="请输入接受商号账二级密码" name="" id="" value="" />
+							</div>
+							<div class="cap">
+								<span class="buttonTitle" id="rollOut">提交</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<!--当前业绩考核-->
+			<div class="list">
+				<ul>
+					<li>
+						<div class="team">
+							<span class="sale">出售商品</span>
+							<img src="images/pro_4.png"/>
+							<div class="cap">
+								<span>出售类型</span>
+								<input type="text" readonly="readonly" name="" id="" value="可售商品价值" />
+							</div>
+							<div class="cap">
+								<span>出售额度</span>
+								<input type="number" placeholder="出售额度必须为100的整数倍" name="" id="" value="" />
+							</div>
+							<div class="cap">
+								<span>二级密码</span>
+								<input type="text" placeholder="请输入接受商号账二级密码" name="" id="" value="" />
+							</div>
+							<div class="cap">
+								<span class="buttonTitle" id="chushou">提交</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<script>
+			$(".tab a").click(function() {
+				var index = $(".tab a").index($(this));
+				$(".tab a").removeClass("active").eq(index).addClass("active");
+				$(".list").removeClass("on").eq(index).addClass("on");
+				show();
+			})
+			
+		</script>
+
+	</body>
+
+</html>

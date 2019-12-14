@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="珠宝商城" />
+		<meta name="description" content="珠宝商城" />
+		<title>珠宝商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.group.list {  justify-content: space-between;}
+			.kefu .group label{    width: 8rem;}
+		</style>
+	</head>
+	<body>
+		<div class="header">
+			<a class="back" href="javascript:history.back(-1);"><img src="images/back.png"/></a>
+			<span class="txt">意见反馈</span>
+		</div>
+		
+		<div class="kefu">
+			<div class="form">
+				<div class="group">
+					<label>收件人：</label>
+					<input value="客服" readonly/>
+				</div>
+				<div class="group">
+					<label>标&nbsp;&nbsp;&nbsp;题：</label>
+					<input title="请用一句话描叙您的问题" placeholder="请用一句话描叙您的问题20字以内"  class="title" id="title" oninput="InputTitle(this)" />
+				</div>
+				<div class="group" style="display: block;">
+					<textarea rows="" cols="" class="con" id="con" placeholder="请详细说明问题，以便客服人员更好的回答您的问题。500字以内" style="-webkit-user-select: auto;" contenteditable="true"
+					  oninput="InputCon(this)" class="title" oninput="this.value=this.value.length>500?this.value.substr(0,5000):this.value;"></textarea>
+					<div class="box">
+						<div class="uplaod_box">
+							<div class="upload">
+								<div class="photo">
+									<div class="photo_l">
+										<img src="images/add.png" class="ico"/> 
+									</div>
+									<input type="file" class="file" id="file" onchange="preview(this)"/>
+								</div>
+							</div>
+						</div>
+						<p>添加图片能够让客服人员更直观明白您的问题！</p>
+					</div>
+				</div>
+				<!--<div class="height1"></div>-->
+				<button class="submit">提交</button>
+			</div>
+			
+		</div>
+		
+		<script src="js/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+
+		<script type="text/javascript">
+			//图片预览
+			 function preview(file) {
+			//    var prevDiv = document.getElementById('preview');
+				//	var parent=$(file).parents(".photo");
+				var parent=$(file).prev();
+			//	console.log(parent.html())
+				var img;
+				if (file.files && file.files[0]) {
+					var reader = new FileReader();
+					reader.onload = function (evt) {
+					//	console.log('src11:'+evt.target.result)
+						var src=evt.target.result;
+//		                parent.innerHTML = '<img src="' + evt.target.result + '" class="img"/>';
+						img='<img src="' + evt.target.result + '" class="img"/>';
+						console.log(img)
+						parent.html(img);
+					}
+					reader.readAsDataURL(file.files[0]);
+				} else {
+				   // parent.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';
+					var src=file.value;
+					img='<img src="' + src + '" class="img"/>';
+//					console.log('src22:'+src)
+//					$("#demo1").attr('src',src)
+				}
+			}
+		
+			
+			$(".submit").click(function(){
+				var title=$("#title").val();
+				var con=$("#con").val();
+				var file=$("#file").val();
+				// 是否非空
+				if(!isKong(title,$("#title").attr("placeholder"))){
+					return false;
+				}
+				// 是否非空
+				if(!isKong(con,$("#con").attr("placeholder"))){
+					return false;
+				}
+				if(!isSpecialChar(con)){
+					return false;
+				}
+				
+				mui.alert("","提交成功" ,"确定")
+			})
+			
+			
+			
+			
+		</script>
+		
+	</body>
+</html>

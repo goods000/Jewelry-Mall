@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="apple-mobile-web-app-capable" content="yes">  
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+		<meta name="keywords" content="珠宝商城" />
+		<meta name="description" content="珠宝商城" />
+		<title>珠宝商城</title>
+		<link rel="icon" type="image/png" href="images/logo.png" sizes="32x32">
+		<link rel="stylesheet" href="css/mui.min.css">
+		<script src="js/mui.min.js"></script>
+		<link rel="stylesheet" href="css/public.css">
+		<link rel="stylesheet" href="css/user.css">
+		<script src="js/jquery-1.11.0.min.js"></script>
+		
+		<!-- <script src="layer/layer.js"></script> -->
+		<script src="js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			.tab a{width: 50% !important;}
+			.tab a.active::after{width: 20% !important;left: 40% !important;}
+		</style>
+	</head>
+
+	<body>
+		<div class="header">
+			<a class="back" href="user.html"><img src="images/back.png" /></a>
+			<span class="txt">考核及申请</span>
+		</div>
+
+		<div class="order">
+			
+			<div class="tab">
+				<a href="javascritp:;" class="active">考核标准</a>
+				<a href="javascritp:;">当前业绩考核</a>
+			</div>
+
+			<!--考核标准-->
+			<div class="list on">
+				<ul>
+					<li>
+						<div class="team">
+							<div class="cap">
+								<span>开始时间</span>
+								<span>2019-11-11 10:08:00</span>
+							</div>
+							<div class="cap">
+								<span>结束时间</span>
+								<span>2019-12-08 20:08:00</span>
+							</div>
+							<div class="cap">
+								<span>考核等级</span>
+								<span>经销商</span>
+							</div>
+							<div class="cap">
+								<span>考核业绩</span>
+								<span>1000</span>
+							</div>
+							<div class="cap">
+								<span>当前业绩</span>
+								<span>0</span>
+							</div>
+							<div class="cap">
+								<span>直推商户</span>
+								<span>2</span>
+							</div>
+							<div class="cap">
+								<span>团队商户</span>
+								<span>0</span>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<!--当前业绩考核-->
+			<div class="list">
+				<ul>
+					<li>
+						<div class="team">
+							<div class="lel">
+								<p>一级代理</p>
+								<div class="lel_box">
+									<span><i>直推商品</i>：<i>15</i></span>
+									<span><i>团队商品</i>：<i>150</i></span>
+									<span><i>考核业绩</i>：<i>0</i></span>
+								</div>
+							</div>
+							<div class="lel">
+								<p>二级代理</p>
+								<div class="lel_box">
+									<span><i>直推商品</i>：<i>10</i></span>
+									<span><i>团队商品</i>：<i>30</i></span>
+									<span><i>考核业绩</i>：<i></i></span>
+								</div>
+							</div>
+							<div class="lel">
+								<p>一级代理</p>
+								<div class="lel_box">
+									<span><i>直推商品</i>：<i>5</i></span>
+									<span><i>团队商品</i>：<i>15</i></span>
+									<span><i>考核业绩</i>：<i></i></span>
+								</div>
+							</div>
+							<div class="lel">
+								<p>一级代理</p>
+								<div class="lel_box">
+									<span><i>直推商品</i>：<i>0</i></span>
+									<span><i>团队商品</i>：<i>0</i></span>
+									<span><i>考核业绩</i>：<i></i></span>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+		</div>
+
+		<script>
+			$(".tab a").click(function() {
+				var index = $(".tab a").index($(this));
+				$(".tab a").removeClass("active").eq(index).addClass("active");
+				$(".list").removeClass("on").eq(index).addClass("on");
+				show();
+			})
+			
+		</script>
+
+	</body>
+
+</html>

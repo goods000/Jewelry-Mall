@@ -1,0 +1,23 @@
+{
+  "status":0,
+ 	"carlist":[{
+	 "id":"1",
+	 "name":"秋冬日式棉拖鞋秋冬日式棉拖鞋秋冬日式棉拖鞋秋冬日式棉拖鞋",
+	 "price":28,
+	 "num":1,
+	 "stock":120,
+	 "guige":"2",
+	 "src":"images/pro.png"
+	 },
+	 {
+	 "id":"2",
+	 "name":"秋冬日式棉拖鞋",
+	 "price":38,
+	  "num":1,
+	 "stock":120,
+	 "guige":"2",
+	 "src":"images/pro.png"
+	 }
+ ]
+
+}

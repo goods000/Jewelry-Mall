@@ -1,0 +1,72 @@
+/** 通用CSS样式 **/
+*{margin:0px; padding:0px; _min-height:1px;list-style: none; -moz-box-sizing: border-box; 
+ /*Firefox3.5+*/-webkit-box-sizing: border-box; /*Safari3.2+*/-o-box-sizing: border-box;
+  /*Opera9.6*/-ms-box-sizing: border-box; /*IE8*/box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0); }
+a{display:inline-block; color: #333; }
+a:hover, a:focus{ text-decoration: none; }
+a, body, div, html, img, li, ul,dl,dt,dd,p { border: 0; margin: 0; padding: 0; text-decoration:none;}
+html,body {margin: 0;font-family: "PingFangSC","微软雅黑", "Segoe UI", 
+Arial, sans-serif; /*background: #fff;*/}
+img {color: transparent; font-size:12px;  -ms-interpolation-mode: bicubic;}
+ol, ul ,dl ,dt,dd{ list-style: none;  }
+a{ cursor:pointer; outline:none; }
+
+a:active,a:focus
+a:hover ,a:visited{
+	outline: 0 !important;
+	border:none;
+-webkit-tap-highlight-color: rgba(0,0,0,0);
+-webkit-tap-highlight-color:transparent;
+}
+em, i, b, sub, sup { font-style: normal!important; font-weight: normal!important; }
+input{ border:0px; outline:none;  vertical-align:middle;}
+input[type='text'],
+input[type='password']{ padding: 0px 10px; }
+select{outline:none;appearance: none;-webkit-appearance: none;}
+button{ outline: none;appearance: none;-webkit-appearance: none;}
+body{background: #F3F6FB;}
+@media only screen and (min-width: 100px) and (max-width: 640px) {
+				html{font-size: calc(100vw/26.6);}
+}
+@media only screen and (min-width: 639px) and (max-width: 1920px) {
+	html{font-size: 12px;}
+}
+/*body{background: url(../images/bg.jpg) no-repeat;background-size:100% ;}*/
+
+/*---------------头部------------------*/
+.header{overflow: hidden;text-align: center;font-size: 1.4rem;padding: 0 15px;/*position: fixed;top: 0px; left: 0px;*/
+    right: 0px;background: linear-gradient(to left,#FA825B,#FC5E53);height: 48px;line-height: 48px;background-size:100% ;position: relative;color: #999;
+	display: flex;justify-content: space-between;align-items: center;z-index: 66;}
+.header span.txt{font-size: 1.2rem;font-weight: normal;width: 100%;text-align: center;color: #fff;
+position: absolute;top: 0;left: 0;z-index: -1;}
+.header .back{color: #fff;font-size: 1rem;}
+.header .back img{width: 1.25rem;vertical-align: middle;margin-right: 0.5rem;}
+.header .back span{    vertical-align: middle;font-size: 1rem;}
+.header .fr{font-size: 1.2rem;color: #fff;}
+.header .fr img{width: 1.25rem;}
+.h1{background: linear-gradient(to left,#FA825B,#FC5E53);}
+.h1 span.txt{color: #fff !important;}
+.record{background:url(../images/user_top.png) no-repeat !important;background-size: 100% 100%;text-align: center;}
+.h_top{background: none !important;border-bottom: none !important;}
+
+/*--------------------------footer-------------------------*/
+
+.height1{height: 74px;}
+.footer{margin-top: 2rem;    background: #fff;width: 100%;    z-index: 66;
+position: fixed;bottom: 0;left: 0;border-top: 1px solid #F0F0F0; height: 48px;}
+.footer ul{overflow: hidden;display: flex;justify-content: space-between;}
+.footer li{float: left;width: 25%;text-align: center;box-sizing: border-box;
+font-size: 12px; padding: 5px 0;display: flex;flex-direction: column;justify-content: space-between;}
+.footer .active{}
+.footer img{width: 20px;    color: #fff;    display: block; margin: auto; vertical-align: top;}
+.footer p{text-align: center;margin:0;font-size: 0.8rem;color: #737171;}
+.footer a{color: #A1ABB7;display: block;}
+.footer-div{width: 80%;margin: 0 auto;}
+.footer .selected p{color: #FF384F;}
+
+/*---------------------没有数据时显示--------------*/   
+.kong{text-align: center;margin-top: 100px;display: none;}
+.kong p{font-size: 1.2rem;color: #333;margin-top: 1rem;}
+.kong img{width: 200px;margin-top: 1rem;}
+.kong a{color: #fff;background: linear-gradient(to left,#F92C4A,#FE5745);display: block;width: 30%;margin: auto;border-radius: 25px;padding: 8px 0;}

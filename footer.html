@@ -1,0 +1,60 @@
+	
+<div class="height1"></div>
+<div class="footer">
+	<ul>
+		<li>
+			<a href="index.html">
+			<div class="footer-div">
+			<p><img src="images/home.png"/></p>
+			<p class="" >首页</p>
+			</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="cart.html">
+			<div class="footer-div">
+			<p><img src="images/cart.png"/></p>
+			<p class="">购物车</p>
+			</div>
+			</a>
+		</li>
+		<li>
+			<a href="order.html">
+			<div class="footer-div">
+			<p><img src="images/order.png"/></p>
+			<p class="" >订单</p>
+			</div>
+			</a>
+		</li>
+		
+		<li>
+			<a href="user.html">
+			<div class="footer-div">
+			<p><img src="images/user.png"/></p>
+			<p class="" >我的</p>
+			</div>
+			</a>
+		</li>
+		
+		
+	</ul>
+</div>
+<script>
+	function msg(){
+		mui.toast('暂未开放，敬请期待！')
+	}
+	
+	var name=$('#footer').attr('name');
+	console.log("name:"+name)
+	show_footer(name)
+	function show_footer(name){
+		var src=$(".footer li:nth-of-type("+name+") img").attr("src");
+		src=src.slice(0,-4)
+		// console.log("src:"+src)
+		src=src+"_selected.png";
+	//	console.log("src:"+src)
+		$(".footer li:nth-of-type("+name+")").addClass("selected");
+		$(".footer li:nth-of-type("+name+") img").attr("src",src);
+	}
+</script>

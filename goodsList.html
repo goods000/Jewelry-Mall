@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">  
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">  
+	<meta name="keywords" content="珠宝商城" />
+	<meta name="description" content="珠宝商城" />
+	<title>珠宝商城</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="layer/layer.js"></script>
+	<link rel="stylesheet" href="css/swiper.min.css">
+	<style type="text/css">
+		form{width: 100%;}
+			.goodsList .search .ico{background: url(images/search.png) no-repeat;
+	background-size: 100% 100%;}
+	</style>
+	</head>
+	<body>
+		<div class="goodsList">
+			<!--搜索栏-->
+			<div class="search">
+				<a href="javascript:history.back(-1);" class="back"><img src="images/back.png" ></a>
+				<form action="sear_list.html" method="">
+					<button type="submit" id="" class="ico" name="" ></button>
+					<input type="" class="inp" placeholder="请输入要搜索的产品"/>
+				</form>
+				<a href="cart.html" class="fr"><img src="images/cart.png" ></a>
+			</div>
+			<div class="goodsLisl_pro">
+				<div class="tab">
+					<a href="goodsList.html" class="active">推荐</a>
+					<a href="goodsList.html">美食</a>
+					<a href="goodsList.html">家居生活</a>
+					<a href="goodsList.html">服饰箱包</a>
+					<a href="goodsList.html">文教娱乐</a>
+					<a href="goodsList.html">手机数码</a>
+					<a href="goodsList.html">家居电器</a>
+					<a href="goodsList.html">精品彩妆</a>
+				</div>
+				<div class="show_pro">
+					<ul>
+						<li>
+							<a href="goods_detail.html">
+							<div class="img">
+								<img src="images/pro.png" />
+							</div>
+							<p class="name">
+								Lancome兰蔻 TC清滢柔肤水 大粉水  玫瑰露保湿补水乳液爽肤水
+							</p>
+							</a>
+						</li>
+						<li>
+							<a href="goods_detail.html">
+							<div class="img">
+								<img src="images/pro.png" />
+							</div>
+							<p class="name">
+								Lancome兰蔻 TC清滢柔肤水 大粉水  玫瑰露保湿补水乳液爽肤水
+							</p>
+							</a>
+						</li>
+						<li>
+							<a href="goods_detail.html">
+							<div class="img">
+								<img src="images/pro.png" />
+							</div>
+							<p class="name">
+								Lancome兰蔻 TC清滢柔肤水 大粉水  玫瑰露保湿补水乳液爽肤水
+							</p>
+							</a>
+						</li>
+						<li>
+							<a href="goods_detail.html">
+							<div class="img">
+								<img src="images/pro.png" />
+							</div>
+							<p class="name">
+								Lancome兰蔻 TC清滢柔肤水 大粉水  玫瑰露保湿补水乳液爽肤水
+							</p>
+							</a>
+						</li>
+					</ul>
+					<!--没有数据时显示-->
+					<div class="kong">
+						<img src="images/kong.png" />
+						<p data-localize="NoData">暂无数据</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			$(".img img").width($(".img img").height())
+
+			
+			show();
+			function show() {
+				//没有数据的时候显示
+				if($(".show_pro li").length <= 0) {
+					$(".kong").show();
+				} else {
+					$(".kong").hide();
+				}
+			}
+		</script>
+	</body>
+</html>
